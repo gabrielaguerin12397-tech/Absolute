@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Absolute Estética Automotiva | Lavagem Detalhada Para Motos</title>
+    <meta
+      name="description"
+      content="Lavagem detalhada para motos com banho de brilho, pretinho nos pneus, restauração de plástico e couro e limpeza detalhada de correntes na região do Jorge Teixeira, Manaus."
+    />
+    <link rel="icon" type="image/png" href="assets/absolute-logo.png" />
+    <meta property="og:title" content="Absolute Estética Automotiva" />
+    <meta
+      property="og:description"
+      content="Lavagem detalhada para motos na região do Jorge Teixeira, Manaus. Solicite orçamento pelo WhatsApp."
+    />
+    <meta property="og:type" content="website" />
+    <style>
+      :root {
+        --ink: #151515;
+        --muted: #5c6068;
+        --paper: #f7f6f2;
+        --panel: #ffffff;
+        --red: #d72626;
+        --red-dark: #a51216;
+        --gold: #e2b458;
+        --line: #dedbd2;
+        --green: #1f9d5a;
+        --shadow: 0 16px 42px rgba(21, 21, 21, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .topbar {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px clamp(18px, 4vw, 56px);
+        color: #fff;
+        background: rgba(10, 10, 10, 0.76);
+        backdrop-filter: blur(12px);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .brand img {
+        display: block;
+        width: clamp(86px, 9vw, 128px);
+        height: auto;
+      }
+
+      .top-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-link {
+        color: #f7f7f7;
+        font-size: 14px;
+        text-decoration: none;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border: 0;
+        border-radius: 8px;
+        font-weight: 800;
+        text-decoration: none;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .button.primary {
+        color: #fff;
+        background: var(--red);
+        box-shadow: 0 10px 26px rgba(215, 38, 38, 0.3);
+      }
+
+      .button.primary:hover {
+        background: var(--red-dark);
+      }
+
+      .button.whatsapp {
+        color: #fff;
+        background: var(--green);
+        box-shadow: 0 10px 26px rgba(31, 157, 90, 0.28);
+      }
+
+      .button.secondary {
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.58);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        color: #fff;
+        background:
+          radial-gradient(circle at 50% 18%, rgba(215, 38, 38, 0.2), transparent 34%),
+          linear-gradient(180deg, #050505, #171717 72%, #0d0d0d);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0));
+        pointer-events: none;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        width: min(1040px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: 112px 0 64px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 18px;
+        color: var(--gold);
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 34px;
+        height: 3px;
+        background: var(--red);
+      }
+
+      .hero-video-frame {
+        overflow: hidden;
+        width: min(360px, 82vw);
+        margin: 0 auto 18px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        aspect-ratio: 9 / 16;
+        background: #000;
+        box-shadow: 0 18px 54px rgba(0, 0, 0, 0.46);
+      }
+
+      .hero-video-frame video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .hero-package-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin: 0 auto 28px;
+      }
+
+      .hero-package-list .strip-item {
+        min-height: 112px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
+      }
+
+      h1 {
+        max-width: 900px;
+        margin: 0;
+        font-size: clamp(38px, 7vw, 78px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .hero p {
+        max-width: 690px;
+        margin: 22px 0 0;
+        color: #f0efe9;
+        font-size: clamp(18px, 2.4vw, 24px);
+        line-height: 1.38;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .service-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: min(1040px, calc(100% - 36px));
+        margin: -42px auto 0;
+        position: relative;
+        z-index: 3;
+        box-shadow: var(--shadow);
+      }
+
+      .strip-item {
+        min-height: 84px;
+        padding: 18px;
+        color: #fff;
+        background: var(--ink);
+        border-right: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .strip-item:nth-child(even) {
+        background: #26231e;
+      }
+
+      .strip-item strong {
+        display: block;
+        font-size: 15px;
+      }
+
+      .strip-item span {
+        display: block;
+        margin-top: 5px;
+        color: #d9d7cf;
+        font-size: 13px;
+        line-height: 1.3;
+      }
+
+      section {
+        padding: clamp(58px, 8vw, 96px) clamp(18px, 4vw, 56px);
+      }
+
+      .section-inner {
+        width: min(1040px, 100%);
+        margin: 0 auto;
+      }
+
+      .section-title {
+        max-width: 760px;
+        margin: 0 0 26px;
+        font-size: clamp(30px, 5vw, 50px);
+        line-height: 1.04;
+        letter-spacing: 0;
+      }
+
+      .section-copy {
+        max-width: 720px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.58;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .card {
+        min-height: 190px;
+        padding: 22px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .card .number {
+        color: var(--red);
+        font-weight: 900;
+        font-size: 14px;
+      }
+
+      .card h3 {
+        margin: 18px 0 10px;
+        font-size: 21px;
+        line-height: 1.1;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.45;
+      }
+
+      .video-section {
+        color: #fff;
+        background: #171717;
+      }
+
+      .video-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 390px);
+        gap: clamp(24px, 5vw, 54px);
+        align-items: center;
+      }
+
+      .video-frame {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        aspect-ratio: 9 / 16;
+        background: #000;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+      }
+
+      .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .video-section .section-copy {
+        color: #ddd8cc;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 34px;
+      }
+
+      .step {
+        padding-top: 18px;
+        border-top: 3px solid var(--red);
+      }
+
+      .step strong {
+        display: block;
+        font-size: 20px;
+      }
+
+      .step span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .cta {
+        padding: clamp(48px, 8vw, 76px) clamp(18px, 4vw, 56px);
+        color: #fff;
+        background: linear-gradient(90deg, #171717, #2a2119);
+      }
+
+      .cta .section-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .cta h2 {
+        max-width: 690px;
+        margin: 0;
+        font-size: clamp(29px, 4.5vw, 48px);
+        line-height: 1.05;
+      }
+
+      .footer {
+        padding: 28px clamp(18px, 4vw, 56px);
+        color: #e9e7df;
+        background: #111;
+      }
+
+      .footer .section-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .footer a {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      @media (max-width: 860px) {
+        .topbar {
+          align-items: flex-start;
+        }
+
+        .top-actions .nav-link {
+          display: none;
+        }
+
+        .service-strip,
+        .hero-package-list,
+        .grid,
+        .steps,
+        .video-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .service-strip {
+          margin-top: 0;
+          width: 100%;
+        }
+
+        .strip-item {
+          border-right: 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .hero {
+          min-height: 100vh;
+        }
+
+        .hero-content {
+          padding-top: 100px;
+          padding-bottom: 56px;
+        }
+
+        .video-frame {
+          width: min(390px, 100%);
+          margin: 0 auto;
+        }
+
+        .cta .section-inner {
+          display: block;
+        }
+
+        .cta .button {
+          margin-top: 24px;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .topbar {
+          padding: 12px 14px;
+        }
+
+        .brand img {
+          width: 82px;
+        }
+
+        .button {
+          min-height: 44px;
+          padding: 0 13px;
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 39px;
+        }
+
+        .hero p,
+        .section-copy {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Absolute Estética Automotiva">
+        <img src="assets/absolute-logo.png" alt="Absolute Estética Automotiva" />
+      </a>
+      <div class="top-actions">
+        <a class="nav-link" href="https://www.instagram.com/absolutee_auto/" target="_blank" rel="noopener">Instagram</a>
+        <a class="button whatsapp js-whatsapp" href="https://wa.me/5592993496458?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20quero%20um%20or%C3%A7amento%20para%20lavagem%20detalhada%20de%20moto%20com%20a%20Absolute." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Absolute Estética Automotiva">
+        <div class="hero-content">
+          <div class="hero-video-frame">
+            <video controls autoplay muted loop playsinline preload="metadata">
+              <source src="assets/lavagem-moto.mov" />
+              Seu navegador não conseguiu carregar o vídeo.
+            </video>
+          </div>
+          <div class="hero-package-list" aria-label="Itens inclusos no pacote para motos">
+            <div class="strip-item">
+              <strong>Banho de brilho</strong>
+              <span>Acabamento para valorizar pintura e carenagem.</span>
+            </div>
+            <div class="strip-item">
+              <strong>Pneus pretinhos</strong>
+              <span>Revitalização visual dos pneus da moto.</span>
+            </div>
+            <div class="strip-item">
+              <strong>Plástico e couro</strong>
+              <span>Restauração visual de partes plásticas e couro.</span>
+            </div>
+            <div class="strip-item">
+              <strong>Corrente detalhada</strong>
+              <span>Limpeza cuidadosa da corrente e áreas próximas.</span>
+            </div>
+          </div>
+          <div class="eyebrow">Jorge Teixeira e região</div>
+          <h1>Lavagem detalhada para motos</h1>
+          <p>
+            Banho de brilho, pneus revitalizados, restauração de plástico e couro e limpeza detalhada de correntes com atendimento inicial na região do Jorge Teixeira.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary js-whatsapp" href="https://wa.me/5592993496458?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20quero%20um%20or%C3%A7amento%20para%20lavagem%20detalhada%20de%20moto%20com%20a%20Absolute." target="_blank" rel="noopener">Solicitar orçamento</a>
+            <a class="button secondary" href="#servicos">Ver o pacote</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicos">
+        <div class="section-inner">
+          <h2 class="section-title">Um pacote direto para quem quer a moto limpa e bem apresentada</h2>
+          <p class="section-copy">
+            A Absolute atende inicialmente a região do Jorge Teixeira, com agendamento pelo WhatsApp. Você envia o modelo da moto, fotos do estado atual e recebe o orçamento da lavagem detalhada.
+          </p>
+          <div class="grid">
+            <article class="card">
+              <span class="number">01</span>
+              <h3>Banho de brilho</h3>
+              <p>Finalização para realçar pintura, carenagem e acabamento externo da moto.</p>
+            </article>
+            <article class="card">
+              <span class="number">02</span>
+              <h3>Pretinho nos pneus</h3>
+              <p>Revitalização visual dos pneus para deixar a moto com aparência mais caprichada.</p>
+            </article>
+            <article class="card">
+              <span class="number">03</span>
+              <h3>Plástico e couro</h3>
+              <p>Restauração visual de plásticos e couro para reduzir aspecto opaco ou ressecado.</p>
+            </article>
+            <article class="card">
+              <span class="number">04</span>
+              <h3>Corrente detalhada</h3>
+              <p>Limpeza detalhada da corrente e áreas próximas, onde a sujeira costuma acumular.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-inner">
+          <h2 class="section-title">Como funciona o atendimento</h2>
+          <div class="steps">
+            <div class="step">
+              <strong>1. Envie fotos</strong>
+              <span>Mostre o estado atual da moto e informe modelo, bairro e melhor horário.</span>
+            </div>
+            <div class="step">
+              <strong>2. Receba o orçamento</strong>
+              <span>A Absolute confirma o valor da lavagem detalhada para moto e combina o atendimento.</span>
+            </div>
+            <div class="step">
+              <strong>3. Atendimento no local</strong>
+              <span>O serviço é feito na região do Jorge Teixeira, em casa, condomínio ou empresa.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="section-inner">
+          <h2>Quer deixar sua moto limpa, brilhando e pronta para rodar?</h2>
+          <a class="button whatsapp js-whatsapp" href="https://wa.me/5592993496458?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20quero%20um%20or%C3%A7amento%20para%20lavagem%20detalhada%20de%20moto%20com%20a%20Absolute." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="section-inner">
+        <span>Absolute Estética Automotiva - Manaus, AM</span>
+        <a href="https://www.instagram.com/absolutee_auto/" target="_blank" rel="noopener">@absolutee_auto</a>
+      </div>
+    </footer>
+
+    <script>
+      const GOOGLE_ADS_CONVERSION_ID = "";
+      const GOOGLE_ADS_CONVERSION_LABEL = "";
+
+      if (GOOGLE_ADS_CONVERSION_ID) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag() {
+          dataLayer.push(arguments);
+        };
+
+        const gtagScript = document.createElement("script");
+        gtagScript.async = true;
+        gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_CONVERSION_ID}`;
+        document.head.appendChild(gtagScript);
+
+        gtag("js", new Date());
+        gtag("config", GOOGLE_ADS_CONVERSION_ID);
+      }
+
+      function trackWhatsAppClick(event) {
+        const link = event.currentTarget;
+        const destination = link.href;
+
+        if (typeof gtag !== "function" || !GOOGLE_ADS_CONVERSION_ID || !GOOGLE_ADS_CONVERSION_LABEL) {
+          return;
+        }
+
+        event.preventDefault();
+        let redirected = false;
+        const go = () => {
+          if (redirected) return;
+          redirected = true;
+          window.open(destination, "_blank", "noopener");
+        };
+
+        gtag("event", "conversion", {
+          send_to: `${GOOGLE_ADS_CONVERSION_ID}/${GOOGLE_ADS_CONVERSION_LABEL}`,
+          event_callback: go
+        });
+
+        setTimeout(go, 900);
+      }
+
+      document.querySelectorAll(".js-whatsapp").forEach((link) => {
+        link.addEventListener("click", trackWhatsAppClick);
+      });
+    </script>
+  </body>
+</html>
